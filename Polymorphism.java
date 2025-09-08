@@ -1,6 +1,14 @@
 interface Camera {
     void takeSnap();
     void recordVideo();
+
+    private void notification(){
+        System.out.println("HIDE NOTIFICATION");
+    }
+    default void recordVideoInSlowMo(){
+        notification();
+        System.out.println("Recording video in SLOW MOTION");
+    }
 }
 
 interface Wifi{
@@ -44,6 +52,12 @@ public class Polymorphism {
     public static void main(String[] args){
         SmartPhone sp = new SmartPhone();
         sp.callNumber(100);
+        // sp.notification(); It will through an error because it is private and if we want to access it we should give the method path to default.
+        sp.recordVideoInSlowMo();
+        
+        //POLYMORPHISM
+        Wifi cl =new SmartPhone();
+        cl.connectToNetwork("\'I will not give\'");
     
 
     }
