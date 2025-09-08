@@ -9,7 +9,7 @@ interface Wifi{
 }
 
 class Cellphone{
-    Void callNumber(int phoneNumber){
+    void callNumber(int phoneNumber){
         System.out.println("Calling "+phoneNumber);
     }
     void pickCall(){
@@ -42,6 +42,9 @@ class SmartPhone extends Cellphone implements Camera, Wifi{
 
 public class Polymorphism {
     public static void main(String[] args){
+        SmartPhone sp = new SmartPhone();
+        sp.callNumber(100);
+    
 
     }
 }
