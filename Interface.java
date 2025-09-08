@@ -1,6 +1,12 @@
 interface AnimalSound {
     int a = 7;
     public void sound();
+    private void animalhome(){
+        System.out.println("forest");
+    }
+    default void  asdf(){
+        animalhome();
+    }
 }
 
 interface AnimalFood  {
@@ -29,7 +35,10 @@ class Cat implements AnimalSound,AnimalFood{
 
 public class Interface {
     public static void main(String[] args){
+
+
         Cat anc = new Cat();
+        anc.asdf();
         anc.sound();
         anc.food();
         System.out.println(anc.a);
