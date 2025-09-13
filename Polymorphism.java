@@ -16,7 +16,7 @@ interface Wifi{
     void connectToNetwork(String network);
 }
 
-class Cellphone{
+class CellPhone{
     void callNumber(int phoneNumber){
         System.out.println("Calling "+phoneNumber);
     }
@@ -25,7 +25,7 @@ class Cellphone{
     }
 }
 
-class SmartPhone extends Cellphone implements Camera, Wifi{
+class SmartPhone extends CellPhone implements Camera, Wifi{
     
     public void takeSnap(){
         System.out.println("Taking SNAP");
@@ -52,13 +52,16 @@ public class Polymorphism {
     public static void main(String[] args){
         SmartPhone sp = new SmartPhone();
         sp.callNumber(100);
-        // sp.notification(); It will through an error because it is private and if we want to access it we should give the method path to default.
+        // sp.notification(); //It will through an error because it is private and if we want to access it we should give the method path to default.
         sp.recordVideoInSlowMo();
         
         //POLYMORPHISM
         Wifi cl =new SmartPhone();
         cl.connectToNetwork("\'I will not give\'");
-    
+        String[] arr =cl.getNetworks();
+        for(String s : arr){
+            System.out.println(s);
+        }
 
     }
 }
