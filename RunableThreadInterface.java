@@ -3,19 +3,17 @@ class MyThread_1 extends Thread{
         super(name);
     }
     public void run(){
-        // while (true) {
-        //     System.out.println("Thread is playing");            
-        // }
-        System.out.println("Hi,i am theard 1 not threat");
+        while (true) {
+            System.out.println("Hi,i am theard not threat "+getName());          
+        }
     }
 
 }
 class MyThread_2 implements Runnable{
     public void run(){
-        // while (true) {
-        //     System.out.println("Thread is chatting");            
-        // }
-        System.out.println("Hi,i am theard 2 not threat");
+        while (true) {
+            System.out.println("Hi,i am theard 2 not threat");
+        }
     }
     
 }
@@ -29,5 +27,14 @@ public class RunableThreadInterface {
         tt2.start();
         System.out.println(t1.getId());
         System.out.println(t1.getName());
+
+        MyThread_1 t3 = new MyThread_1("Shoaib3");
+        MyThread_1 t4 = new MyThread_1("Shoaib4");
+        MyThread_1 t5 = new MyThread_1("---Shoaib5---");
+        t3.start();
+        t4.start();
+        t5.start();
+        t5.setPriority(Thread.MAX_PRIORITY);
+
     }
 }
