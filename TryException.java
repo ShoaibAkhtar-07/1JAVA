@@ -16,6 +16,12 @@ public class TryException {
             System.out.println("division of array  value by given number : "+marks[ind]/num);
 
         }
+        catch (ArithmeticException e){
+            System.out.println(e);
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }
         catch(Exception e){
             System.out.println("Some error occured");
             System.out.println(e);
