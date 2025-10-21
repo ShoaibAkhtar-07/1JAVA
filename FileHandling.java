@@ -34,6 +34,15 @@ public class FileHandling {
         }
         */
 
+        /* 
+        File file = new File("students.txt"); 
+        if (file.delete()) { 
+            System.out.println("Deleted Successfully: " + file.getName());
+        } else {
+            System.out.println("Error......");
+        }
+        */
+
     }
 }
 
