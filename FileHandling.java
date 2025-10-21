@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class FileHandling {
     public static void main(String[] args) {
         
+        /*
         try {
         File myObj = new File("students.txt");
             if (myObj.createNewFile()) {
@@ -15,7 +16,23 @@ public class FileHandling {
         } catch (IOException e) {
             System.out.println("Error.....");
             e.printStackTrace();
-        } 
+        }
+        */
+
+        /*
+        try {
+            File file = new File("students.txt");
+            Scanner myReader = new Scanner(file);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Error.....");
+            e.printStackTrace();
+        }
+        */
 
     }
 }
